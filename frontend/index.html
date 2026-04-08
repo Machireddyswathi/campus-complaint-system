@@ -7,19 +7,20 @@
 
 <h2>Loading...</h2>
 <div id="toast"></div>
+
 <script>
 
 const token = localStorage.getItem("token");
 const role = localStorage.getItem("role");
 
 if (!token) {
-window.location.href = "pages/login.html";
+window.location.href = "./pages/login.html";
 }
 else if (role === "ADMIN") {
-window.location.href = "pages/admin.html";
+window.location.href = "./pages/admin.html";
 }
 else {
-window.location.href = "pages/student.html";
+window.location.href = "./pages/student.html";
 }
 
 </script>
