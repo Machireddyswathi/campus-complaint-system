@@ -1,4 +1,4 @@
-const API = "https://campus-complaint-system-u46x.onrender.com";
+const API = "https://campus-complaint-system-u46x.onrender.com/api";
 
 const token = localStorage.getItem("token");
 const role = localStorage.getItem("role");
