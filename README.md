@@ -7,8 +7,8 @@ The system includes authentication, role-based access control, complaint trackin
 
 # 🚀 Live Demo
 
-Frontend: https://machireddyswathi.github.io/campus-complaint-system/
-Backend: https://your-backend-url.onrender.com
+Frontend: https://machireddyswathi.github.io/campus-complaint-system
+Backend: https://campus-complaint-system-u46x.onrender.com/api
 
 ---
 
