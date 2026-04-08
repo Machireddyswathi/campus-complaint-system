@@ -1,4 +1,4 @@
-const API = "https://campus-complaint-system-u46x.onrender.com";
+const API = "https://campus-complaint-system-u46x.onrender.com/api";
 
 async function login() {
   const email = document.getElementById("email").value.trim();
