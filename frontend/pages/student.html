@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+
+<!-- 🔷 Navbar -->
+<div class="navbar">
+  <h2> Campus Complaint System</h2>
+  <button class="btn-danger" onclick="logout()">Logout</button>
+</div>
+
+<!-- 🔔 Toast -->
+<div id="toast"></div>
+
+<!-- 🔷 Main Container -->
+<div class="container">
+
+  <!-- 📝 Create Complaint -->
+  <div class="card">
+    <h3>Create Complaint</h3>
+
+    <div class="form-row">
+
+      <div class="form-group">
+        <label>Complaint Title</label>
+        <div class="input-icon">
+          <span>📝</span>
+          <input 
+            type="text" 
+            id="title" 
+            placeholder="Enter complaint title" 
+          />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Priority</label>
+        <select id="priority">
+          <option value="Low">Low</option>
+          <option value="Medium" selected>Medium</option>
+          <option value="High">High</option>
+          <option value="Urgent">Urgent</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="form-group">
+      <label>Description</label>
+      <textarea 
+        id="description" 
+        placeholder="Describe your issue clearly..."
+      ></textarea>
+    </div>
+
+    <button class="btn-primary" onclick="createComplaint()">
+      Submit Complaint
+    </button>
+  </div>
+
+  <!-- 🔍 Search + Filter -->
+  <div class="card search-card">
+
+    <div class="form-row">
+
+      <div class="form-group">
+        <label>Search</label>
+        <input 
+          type="text" 
+          id="search" 
+          placeholder="Search complaints..."
+          onkeyup="loadComplaints()" 
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Status Filter</label>
+        <select id="filter" onchange="loadComplaints()">
+          <option value="">All</option>
+          <option value="Pending">Pending</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Resolved">Resolved</option>
+        </select>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- 📋 Complaints -->
+  <div class="section-header">
+    <h3>My Complaints</h3>
+  </div>
+
+  <div id="complaints"></div>
+
+  <!-- 📄 Pagination -->
+  <div id="pagination" class="pagination"></div>
+
+</div>
+
+<script src="../js/student.js"></script>
+
+</body>
+</html>

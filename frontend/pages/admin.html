@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+<h3>Campus Complaint System - Admin</h3>
+<button onclick="logout()">Logout</button>
+</div>
+
+
+<div class="container">
+
+  <div id="stats" class="stats"></div>
+
+  <div class="card">
+    <input id="search" placeholder="🔍 Search..." onkeyup="loadComplaints()" />
+    
+    <select id="filter" onchange="loadComplaints()">
+      <option value="">All Status</option>
+      <option value="Pending">Pending</option>
+      <option value="In Progress">In Progress</option>
+      <option value="Resolved">Resolved</option>
+    </select>
+  </div>
+
+  <h3>All Complaints</h3>
+
+  <div id="complaints"></div>
+
+  <div id="pagination"></div>
+  <div id="toast"></div>
+
+</div>
+<script src="../js/admin.js"></script>
+
+</body>
+</html>
