@@ -1,4 +1,4 @@
-const API = "http://localhost:5000/api";
+const API = "https://campus-complaint-system-u46x.onrender.com";
 const token = localStorage.getItem("token");
 
 let currentPage = 1;
